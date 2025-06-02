@@ -2,6 +2,7 @@ substitutions:
   _IMAGE_NAME: "my-app"
   _REPO_NAME: "my-repo"
   _RELEASE_VERSION: "vMAJOR.MINOR.PATCH"
+  _REGION: "us-east4"
 
 steps:
   - name: 'gcr.io/cloud-builders/docker'
