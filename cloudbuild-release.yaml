@@ -2,7 +2,7 @@ substitutions:
   _IMAGE_NAME: "my-app"
   _REPO_NAME: "my-repo"
   _RELEASE_VERSION: "vMAJOR.MINOR.PATCH"
-  _REGION: "us-central1"
+  _REGION: "us-east4"
 
 steps:
   - name: 'gcr.io/cloud-builders/docker'
@@ -27,3 +27,7 @@ steps:
 images:
   - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO_NAME}/${_IMAGE_NAME}:${_RELEASE_VERSION}'
   - '${_REGION}-docker.pkg.dev/$PROJECT_ID/${_REPO_NAME}/${_IMAGE_NAME}:latest'
+
+options:
+  dynamicSubstitutions: true
+  logging: CLOUD_LOGGING_ONLY
