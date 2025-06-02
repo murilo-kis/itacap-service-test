@@ -1,6 +1,6 @@
 substitutions:
   _IMAGE_NAME: "my-app"
-  #_REPO_NAME: "itacap-service-test"
+  _REPO_NAME: "itacap"
   _RELEASE_VERSION: "vMAJOR.MINOR.PATCH"
   _REGION: "us-east4"
 
