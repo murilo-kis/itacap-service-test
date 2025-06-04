@@ -14,4 +14,4 @@ COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/logging.yaml ./logging.yaml
 RUN npm install --omit=dev
 EXPOSE 8080
-CMD ["node", "dist/app.js"]
+CMD ["node", "dist/server.js"]
