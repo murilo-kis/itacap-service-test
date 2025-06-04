@@ -1,0 +1,6 @@
+#  One of 'fatal', 'error', 'warn', 'info', 'debug', 'trace' or 'silent'.
+root:
+  level: info
+  service:
+    level: debug
+    authService: warn
