@@ -1,9 +1,9 @@
 substitutions:
-  _REPO_NAME: "my-repo"
-  _IMAGE_NAME: "my-app"
+  _IMAGE_NAME: "itacap-service"
+  _REPO_NAME: "itacap"
   _IMAGE_TAG: "vMAJOR.MINOR.PATCH"
-  _REGION: "us-west4"
-  _SERVICE_NAME: "itcap-service"
+  _REGION: "us-east4"
+  _SERVICE_NAME: "itacap-service"
 
 steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
