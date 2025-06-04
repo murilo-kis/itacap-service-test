@@ -21,7 +21,7 @@ interface Config {
 
 const config: Config = {
     env: process.env.ENV || 'local',
-    port: Number(process.env.PORT) || 3030,
+    port: Number(process.env.PORT) || 8080,
     nodeEnv: process.env.NODE_ENV || 'local',
     jwtSecret: process.env.JWT_SECRET || '<JWT_SECRET>',
     jwtExpiresIn: process.env.JWT_EXPIRES_IN || '12h',
