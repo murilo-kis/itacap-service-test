@@ -1,4 +1,4 @@
-import express, {NextFunction} from 'express';
+import express from 'express';
 import exampleRoutes from './routes/exampleRoutes';
 import {errorHandler} from './middleware/errorHandler';
 import itacapRoutes from "./routes/itacapRoutes";
@@ -7,8 +7,8 @@ import {expressjwt} from "express-jwt";
 import config from "./config";
 import authRoutes from "./routes/authRoutes";
 import bodyParser from 'body-parser';
-import {isServiceError} from "./models/serviceError";
-import {Request, Response} from "express";
+import assessmentRoutes from "./routes/assessmentRoutes";
+import {testDB} from "./util/test-db";
 
 const app = express();
 app.use(express.json());
@@ -88,8 +88,12 @@ app.use('/api/example', exampleRoutes);
 app.use('/api/itacap', itacapRoutes);
 app.use('/api/itacap/actlog', actlogRoutes)
 app.use('/auth', authRoutes);
+app.use('/api/itacap/assessment', assessmentRoutes);
 
 // Global error handler (should be after routes)
 app.use(errorHandler);
+
+// Make sure DB works, if it doesn't we are throwing
+testDB()
 
 export default app;
